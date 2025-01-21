@@ -18,7 +18,7 @@ class Chatbot_Module extends Module {
     public function install()
     {
         return parent::install()
-            && $this->registerHook('displayHome');
+            && $this->registerHook('displayFooter');
     }
 
     public function uninstall()
@@ -29,16 +29,21 @@ class Chatbot_Module extends Module {
         return true;
     }
 
-    public function hookDisplayHome($params)
+    public function hookDisplayFooter($params)
     {
-        $url='https://api.spoonacular.com/food/ingredients/9266/information?apiKey=f81e18bd218a47d990c2acffac028a49';
-        $response=$this->makeApiCall($url);
-        $this->context->controller->addCSS($this->_path.'views/css/chatbot_module.css');
-        $this->context->smarty->assign([
-            'message' => $response,
-        ]);
-        return $this->display(__FILE__, '/views/templates/hook/displayHome.tpl');
-        //abc
+
+//        $this->context->controller->addJS('https://cdn.botpress.cloud/webchat/v2.2/inject.js');
+//        $this->context->controller->addJS('https://files.bpcontent.cloud/2025/01/20/12/20250120124814-7P94CLFW.js');
+//        $this->context->controller->addCSS($this->_path . 'views/css/chatbot.css', 'all');
+        $this->context->smarty->assign('chatbot_api_key', 'f81e18bd218a47d990c2acffac028a49');
+
+//        $url='https://api.spoonacular.com/food/ingredients/9266/information?apiKey=f81e18bd218a47d990c2acffac028a49';
+//        $response=$this->makeApiCall($url);
+//        $this->context->controller->addCSS($this->_path.'views/css/chatbot_module.css');
+//        $this->context->smarty->assign([
+//            'message' => $response,
+//        ]);
+        return $this->display(__FILE__, '/views/templates/hook/chatbot.tpl');
     }
 
     private function makeApiCall($url)
