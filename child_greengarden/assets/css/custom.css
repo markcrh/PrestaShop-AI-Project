@@ -1,0 +1,115 @@
+/*
+ * Custom code goes here.
+ * A template should always ship with an empty custom.css
+ */
+
+.thumbnail-container{
+ border-radius: 8px;
+ overflow: hidden;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.topMenuBlock .topmenu .item_menu {
+ float: left;
+}
+
+#_desktop_cart {
+ float: right;
+ text-align: center;
+ position: relative;
+ background-color: forestgreen;
+ width: 100%;
+ border-radius: 8px;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.search-widget input {
+ border: none;
+ outline: none;
+ border-radius: 15px;
+ padding: 1em;
+ background-color: #ccc;
+ box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
+ transition: 300ms ease-in-out;
+}
+
+
+
+
+#_desktop_cart:hover {
+ color: black;
+
+ font-size: 18px;
+ border-radius: 0.5em;
+ background: forestgreen;
+ cursor: pointer;
+
+ transition: all 0.3s;
+ box-shadow: 6px 6px 12px darkgreen, -6px -6px 12px lightgreen;
+}
+
+.topMenuBlock .topmenu .item_menu:hover {
+ border-top-left-radius: 8px;
+ border-top-right-radius: 8px;
+ overflow: hidden;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ background: blanchedalmond;
+}
+
+.item_menu_1 .subcat_menu {
+ background-color: #07781f;
+ border: 2px solid #07781f;
+ width: 162px;
+ min-height: 0px;
+ border-bottom-left-radius: 8px;
+ border-bottom-right-radius: 8px;
+}
+
+#wrapper{
+ background: white;
+}
+.block_home_featured
+.tab_featured{
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.thumbnail-container{
+width: 150px;
+height: 410px;
+}
+
+#logo-header{
+ height: 40px !important;
+
+}
+
+#header .header-top {
+ background: #4cb050;
+}
+
+
+#header .header-top .container .row ._desktop_header_block > div{ 
+ display: none;
+}
+
+.blockTopMenu{
+ margin-top: 0;
+}
+
+#header .header-top {
+ padding-top: 0;
+}
+
+.search-widget {
+ width: 50px;
+ margin-right: 50px;
+}
+
+#logo_test {
+ color: white;
+}
+
+ul .display_list_grid {
+ display: none;
+}
